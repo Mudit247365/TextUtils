@@ -17,12 +17,12 @@ const showAlert=(message,type)=>{
     if(mode==='light'){
       setMode('dark');
       document.body.style.backgroundColor='white';
-      setAlert("Dark mode has been enabled","success")
+      setAlert('Dark mode has been enabled','success')
     }
     else{
       setMode('light');
       document.body.style.backgroundColor='#00004e';
-      setAlert("Light mode has been enabled","success")
+      setAlert('Light mode has been enabled','success')
     }
   }
 
