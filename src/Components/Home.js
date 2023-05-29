@@ -62,7 +62,7 @@ function Home(props) {
             <div className="mb-3 ">
               <textarea style={{backgroundColor: props.mode==='light'? 'grey':'white',color:props.mode==='light'? 'white':'black'}} className="form-control"id="mybox" rows={'10'}column={'50'}onChange={handleOnChange}value={text}            ></textarea>
             </div>
-            <button onClick={Uppercase} className="btn btn-primary mx-2"> Convert t </button>
+            <button onClick={Uppercase} className="btn btn-primary mx-2"> Convert to Uppercase </button>
             <button onClick={Lowercase} className="btn btn-primary  mx-2"> Convert to Lowercase </button>   
             <button onClick={Clear} className="btn btn-primary mx-2"> Clear </button>         
             <button onClick={Copy}  className="btn btn-primary mx-2"> Copy  </button>
