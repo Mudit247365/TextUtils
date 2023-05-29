@@ -20,7 +20,7 @@ function Home(props) {
   const Clear = () => {
     console.log("Clear is clicked");
     let newtext = '';
-    props.alert('All text is Clear', 'success');
+    props.alert('Text Cleared', 'success');
     setText(newtext);
   };
   const Copy1 = () => {
@@ -35,7 +35,7 @@ function Home(props) {
       textarea.select();
       textarea.setSelectionRange(0, 99999); // For mobile devices
       document.execCommand('copy');
-      props.alert('Copy successfully', 'success');
+      props.alert('Copy to Clipboard', 'success');
       // Optional: Show a success message or perform any other desired actions
       
     };
