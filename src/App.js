@@ -15,7 +15,7 @@ const showAlert=(message,type)=>{
         setTimeout(() => {
           setAlert(null)
       
-        }, 1500);
+        }, 2000);
 }
 
 const toggleMode = () => {

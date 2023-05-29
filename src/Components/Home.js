@@ -1,7 +1,5 @@
 
 import React, { useState } from 'react';
-import Alert from './Alert';
-
 
 function Home(props) {
   const Uppercase = () => {
