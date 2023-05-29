@@ -1,26 +1,32 @@
 
 import React, { useState } from 'react';
+import Alert from './Alert';
 
 
 function Home(props) {
   const Uppercase = () => {
     console.log("Uppercase is clicked");
     let newText = text.toUpperCase();
+    props.alert('Convert to Uppercase', 'success');
     setText(newText);
   };
   const Lowercase = () => {
     console.log("Lowercase is clicked");
     let newtext = text.toLocaleLowerCase();
+    props.alert('Convert to Lowercase', 'success');
     setText(newtext);
+    
   };
   const Clear = () => {
     console.log("Clear is clicked");
     let newtext = '';
+    props.alert('All text is Clear', 'success');
     setText(newtext);
   };
   const Copy1 = () => {
     console.log("Copy1 is clicked");
     let newtext = text.split(/\s+/);
+    props.alert('Extra spaces removed', 'success');
     setText(newtext.join(" "));
   };
   const Copy = () => {
@@ -29,8 +35,9 @@ function Home(props) {
       textarea.select();
       textarea.setSelectionRange(0, 99999); // For mobile devices
       document.execCommand('copy');
+      props.alert('Copy successfully', 'success');
       // Optional: Show a success message or perform any other desired actions
-      alert('Text copied to clipboard!');
+      
     };
   
       
@@ -38,10 +45,11 @@ function Home(props) {
   const handleOnChange = (event) => {
     console.log("Uppercase is clicked");
     setText(event.target.value);
+   
   };
 
   const [text, setText] = useState("");
-
+  
   return (
     <>
 

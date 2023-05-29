@@ -13,23 +13,26 @@ const showAlert=(message,type)=>{
         type: type
       })
 }
-  const toggleMode =()=>{
-    if(mode==='light'){
-      setMode('dark');
-      document.body.style.backgroundColor='white';
-      setAlert('Dark mode has been enabled','success')
-    }
-    else{
-      setMode('light');
-      document.body.style.backgroundColor='#00004e';
-      setAlert('Light mode has been enabled','success')
-    }
+
+const toggleMode = () => {
+  if (mode === 'light') {
+    setMode('dark');
+    document.body.style.backgroundColor = 'white';
+    showAlert('Light mode has been enabled', 'success');
+    // Call showAlert function with the message and type
+  } else {
+    setMode('light');
+    document.body.style.backgroundColor = '#00004e';
+    showAlert('Dark mode has been enabled', 'success');
+ // Call showAlert function with the message and type
   }
+};
+
 
   return (
     <div> 
       <Navbar  mode={mode} toggelMode={toggleMode}/>  
-      <Alert  alert={showAlert} />
+      <Alert  alert={alert} />
       <Home  mode={mode} toggelMode={toggleMode} alert={showAlert}/>       
     </div>
   );
