@@ -20,13 +20,13 @@ function Home(props) {
   const Clear = () => {
     console.log("Clear is clicked");
     let newtext = '';
-    props.alert('Text Cleared', 'success');
+    props.alert('All text is Clear', 'success');
     setText(newtext);
   };
   const Copy1 = () => {
     console.log("Copy1 is clicked");
     let newtext = text.split(/\s+/);
-    props.alert('Extra spaces removed', 'success');
+    props.alert('Removed extra', 'success');
     setText(newtext.join(" "));
   };
   const Copy = () => {
@@ -78,7 +78,7 @@ function Home(props) {
            
           <div className="container my-3">
             <h1 style={{color:props.mode==='light'? 'white':'black'}}>Your text summary</h1>
-            <p style={{color:props.mode==='light'? 'white':'black'}}><b>{text.split(" ").length} words & {text.length} characters & {0.008*text.length} minutes read </b></p>
+            <p style={{color:props.mode==='light'? 'white':'black'}}><b>{text.length>0? text.split(" ").length + 'words':'0 Words'} & {text.length} characters & {0.008*text.length} minutes read </b></p>
           </div>
           <div style={{marginLeft:'12x'}}>
             <h2 style={{color:props.mode==='light'? 'white':'black'}}>Preview</h2>
