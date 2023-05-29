@@ -33,11 +33,12 @@ const toggleMode = () => {
 };
 
 
+
   return (
     <div> 
       <Navbar  mode={mode} toggelMode={toggleMode}/>  
       <Alert  alert={alert} />
-      <Home  mode={mode} toggelMode={toggleMode} alert={showAlert}/>       
+      <Home  mode={mode}  toggelMode={toggleMode} alert={showAlert}/>       
     </div>
   );
 }
