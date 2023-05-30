@@ -2,7 +2,7 @@ import Home from './Components/Home';
 import React, { useState } from 'react';
 import Navbar from './Components/Navbar';
 import Alert from './Components/Alert';
-
+import Down from './Components/Down';
 
 function App(props) {
 const [mode, setMode] = useState('dark');
@@ -40,7 +40,8 @@ const toggleMode = () => {
     <div> 
       <Navbar  mode={mode} toggelMode={toggleMode}/>  
       <Alert  alert={alert} />
-      <Home  mode={mode}  toggelMode={toggleMode} alert={showAlert}/>       
+      <Home  mode={mode}  toggelMode={toggleMode} alert={showAlert}/>   
+      <Down mode={mode}/>
     </div>
   );
 }

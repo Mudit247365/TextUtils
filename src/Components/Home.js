@@ -49,19 +49,14 @@ function Home(props) {
   const [text, setText] = useState("");
   
   return (
-    <>
-
-     
+    <>     
       <div>
-      
-       
-
         <div
           className="container"
           style={{ border: "2px transparent ", justifyContent: "center"  }}
         >
           <h1 style={{color:props.mode==='light'? 'white':'black'}}>
-            <b>Enter the text to Analyis mudit</b>
+            <b>Enter the text to Analyis</b>
           </h1>
           
           <div className="container">
