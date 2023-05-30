@@ -23,19 +23,16 @@ const toggleMode = () => {
     setMode('dark');
     document.body.style.backgroundColor = 'white';
     document.title='TextUtils - Light Mode'
-    showAlert('Light mode has been enabled', 'success');
+    showAlert('Light mode has been enabled', 'Success');
     // Call showAlert function with the message and type
   } else {
     setMode('light');
     document.body.style.backgroundColor = '#00004e';
     document.title='TextUtils - Dark Mode'
-    showAlert('Dark mode has been enabled', 'success');
+    showAlert('Dark mode has been enabled', 'Success');
  // Call showAlert function with the message and type
   }
 };
-
-
-
   return (
     <div> 
       <Navbar  mode={mode} toggelMode={toggleMode}/>  

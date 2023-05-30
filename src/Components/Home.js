@@ -5,26 +5,26 @@ function Home(props) {
   const Uppercase = () => {
     console.log("Uppercase is clicked");
     let newText = text.toUpperCase();
-    props.alert('Convert to Uppercase', 'success');
+    props.alert('Convert to Uppercase', 'Success');
     setText(newText);
   };
   const Lowercase = () => {
     console.log("Lowercase is clicked");
     let newtext = text.toLocaleLowerCase();
-    props.alert('Convert to Lowercase', 'success');
+    props.alert('Convert to Lowercase', 'Success');
     setText(newtext);
     
   };
   const Clear = () => {
     console.log("Clear is clicked");
     let newtext = '';
-    props.alert('All text is Clear', 'success');
+    props.alert('All text is Clear', 'Success');
     setText(newtext);
   };
   const Copy1 = () => {
     console.log("Copy1 is clicked");
     let newtext = text.split(/\s+/);
-    props.alert('Removed extra', 'success');
+    props.alert('Removed extra spaces', 'Success');
     setText(newtext.join(" "));
   };
   const Copy = () => {
@@ -33,7 +33,7 @@ function Home(props) {
       textarea.select();
       textarea.setSelectionRange(0, 99999); // For mobile devices
       document.execCommand('copy');
-      props.alert('Copy to Clipboard', 'success');
+      props.alert('Copy to Clipboard', 'Success');
       // Optional: Show a success message or perform any other desired actions
       
     };
@@ -75,10 +75,7 @@ function Home(props) {
           </div>
           <div style={{marginLeft:'12x'}}>
             <h2 style={{color:props.mode==='light'? 'white':'black'}}>Preview</h2>
-            <p style={{color:props.mode==='light'? 'white':'black'}}> {text.length>0? text:'Enter text in the above text box'}</p>
-                
-               
-               
+            <p style={{color:props.mode==='light'? 'white':'black'}}> {text.length>0? text:'Enter text in the above text box'}</p>                
           </div>
         </div>
       </div>
