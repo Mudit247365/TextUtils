@@ -15,7 +15,7 @@ const showAlert=(message,type)=>{
         setTimeout(() => {
           setAlert(null)
       
-        }, 2000);
+        }, 1500);
 }
 
 const toggleMode = () => {
@@ -39,6 +39,7 @@ const toggleMode = () => {
       <Alert  alert={alert} />
       <Home  mode={mode}  toggelMode={toggleMode} alert={showAlert}/>   
       <Down mode={mode}/>
+      
     </div>
   );
 }

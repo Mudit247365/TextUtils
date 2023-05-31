@@ -4,9 +4,9 @@ import React from 'react'
 function Navbar(props) {
   return (
    
-    <div><nav className={`navbar navbar-expand-lg navbar-${props.mode==='light'? 'dark':'light'} bg-${props.mode==='light'? 'dark':'light'}`}>
+    <div><nav className={`navbar navbar-expand-lg navbar- bg-$`} style={{backgroundColor: props.mode==='light'? 'grey':'white'}}>
     <div className="container-fluid">
-      <a className="navbar-brand"  href="/">TextUtils</a>
+      <a className="navbar-brand" style={{backgroundColor: props.mode==='light'? 'grey':'white'}} href="/">TextUtils</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
