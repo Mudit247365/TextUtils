@@ -8,11 +8,7 @@ function Home(props) {
       let newText = text.toUpperCase();
       props.alert('Convert to Uppercase', 'Success');
       setText(newText);
-    }
-    
-    
-    
-  
+    } 
   const Lowercase = () => {
     
     console.log("Lowercase is clicked");
@@ -20,8 +16,6 @@ function Home(props) {
     props.alert('Convert to Lowercase', 'Success');
     setText(newtext);
   } 
-    
- 
   const Clear = () => {
     
     console.log("Clear is clicked");
@@ -43,9 +37,7 @@ function Home(props) {
     
     const textarea = document.getElementById('mybox');
     if (textarea) {
-      textarea.select();
-      textarea.setSelectionRange(0, 99999); // For mobile devices
-      document.execCommand('copy');
+      navigator.clipboard.writeText(text);
       props.alert('Copy to Clipboard', 'Success');
        
       
@@ -84,7 +76,7 @@ function Home(props) {
            
           <div className="container my-3">
             <h1 style={{color:props.mode==='light'? 'white':'black'}}>Your text summary</h1>
-            <p style={{color:props.mode==='light'? 'white':'black'}}><b>{text.split(/\s+/).filter((element)=>{return element.length!=0}).length} words & {text.length} characters </b></p> {'\n'} <p style={{color:props.mode==='light'? 'white':'black'}}><b>{0.10*text.split(" ").filter((element)=>{return element.length!=0}).length} minutes read</b></p>  
+            <p style={{color:props.mode==='light'? 'white':'black'}}><b>{text.split(/\s+/).filter((element)=>{return element.length!=0}).length} words & {text.length} characters </b></p> {'\n'} <p style={{color:props.mode==='light'? 'white':'black'}}><b>{0.*text.split(" ").filter((element)=>{return element.length!=0}).length} minutes read</b></p>  
           </div>
           <div style={{marginLeft:'12x'}}>
             <h2 style={{color:props.mode==='light'? 'white':'black'}}>Preview</h2>
