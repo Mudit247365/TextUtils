@@ -4,6 +4,8 @@ import Navbar from './Components/Navbar';
 import Alert from './Components/Alert';
 import Down from './Components/Down';
 
+
+
 function App(props) {
 const [mode, setMode] = useState('dark');
 const [alert, setAlert] = useState(null);
@@ -40,6 +42,7 @@ const toggleMode = () => {
       <Home  mode={mode}  toggelMode={toggleMode} alert={showAlert}/>   
       <Down mode={mode}/>
       
+     
     </div>
   );
 }

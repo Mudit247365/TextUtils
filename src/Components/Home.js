@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 
+
 function Home(props) {
   const Uppercase = () => {    
      
@@ -61,8 +62,9 @@ function Home(props) {
           style={{ border: "2px transparent ", justifyContent: "center"  }}
         >
           <h1 style={{color:props.mode==='light'? 'white':'black'}}>
-            <b>Enter the text to Analyis</b>
+            <b>Enter the text to Analyis </b>
           </h1>
+          
           
           <div className="container">
             <div className="mb-3 ">
@@ -76,7 +78,7 @@ function Home(props) {
            
           <div className="container my-3">
             <h1 style={{color:props.mode==='light'? 'white':'black'}}>Your text summary</h1>
-            <p style={{color:props.mode==='light'? 'white':'black'}}><b>{text.split(/\s+/).filter((element)=>{return element.length!=0}).length} words & {text.length} characters </b></p> {'\n'} <p style={{color:props.mode==='light'? 'white':'black'}}><b>{0.*text.split(" ").filter((element)=>{return element.length!=0}).length} minutes read</b></p>  
+            <p style={{color:props.mode==='light'? 'white':'black'}}><b>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words & {text.length} characters </b></p> {'\n'} <p style={{color:props.mode==='light'? 'white':'black'}}><b>{0.*text.split(" ").filter((element)=>{return element.length!==0}).length} minutes read</b></p>  
           </div>
           <div style={{marginLeft:'12x'}}>
             <h2 style={{color:props.mode==='light'? 'white':'black'}}>Preview</h2>
