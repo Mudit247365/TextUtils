@@ -7,7 +7,7 @@ import Down from './Components/Down';
 
 
 function App(props) {
-const [mode, setMode] = useState('dark');
+const [mode, setMode] = useState('light');
 const [alert, setAlert] = useState(null);
 const showAlert=(message,type)=>{
     setAlert({
